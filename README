@@ -1,0 +1,11 @@
+# autosession.vim
+
+## Description
+
+autosession.vim is a way to automatically save your git session after each
+buffer change and on close.
+
+## Commands
+
+- `:AutoSessionSave <filename>` save session
+- `:AutoSessionLoad <filename>` load session
