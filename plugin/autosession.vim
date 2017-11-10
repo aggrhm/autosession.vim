@@ -57,10 +57,10 @@ function! s:session_file(name)
   return s:cached_session_file
 endfunction
 
-augroup autosessions
+augroup autosession
     autocmd!
-    autocmd BufEnter * :call g:AutoSessionUpdate()
-    autocmd VimLeave * :call g:AutoSessionUpdate()
+    autocmd BufWritePost * :call g:AutoSessionUpdate()
+    "autocmd VimLeave * :call g:AutoSessionUpdate()
 augroup END
 
 command -nargs=1 -complete=file AutoSessionSave call g:AutoSessionSave(<f-args>)
